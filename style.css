@@ -1,0 +1,283 @@
+*{
+    margin: 0;
+    font-family: sans-serif;
+    line-height: 1.8rem;
+    color: white;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: grey;
+}
+
+header{
+    height: 90px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background-color: rgb(0, 50, 90);
+    width: 100%;
+    padding: 20px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.523);
+}
+
+nav{
+    display: flex;
+    gap: 20px;
+}
+.logo{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+nav a{
+    border-bottom: 2px solid transparent;
+    text-decoration: none;
+    padding: 5px;
+}
+
+nav a:hover{
+    border-bottom: 2px solid white;
+    transition: 0.2s ease-in ;
+}
+
+.hero{
+    width: 100%;
+    height: 110vh;
+    background: url("images/hero_image.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px
+}
+.hero h1{
+    font-size: 5rem;
+}
+.hero h3{
+    text-align: center;
+    font-size: 2rem;
+}
+.hero p{
+    color: white;
+    max-width: 80%;
+    text-align: center;
+    opacity: 0.8;
+}
+.music-section{
+    scroll-margin: 90px;
+    padding-top: 50px;
+    background-color: #281154;
+}
+.music-section .container{
+    display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.container h4{
+    font-size: 2rem;
+}
+.container p{
+    color: white;
+    width: 80%;
+    font-size: 1.11rem;
+    text-align: center;
+    font-weight: 400;
+}
+.container span{
+    color: white;
+    padding: 10px 20px;
+    background: #b80311;
+}
+.container h5{
+    font-size: 0.9rem;
+    font-weight: 200;
+    opacity: 0.8;
+}
+
+.screens{
+    margin-top: -400px;
+    position: relative;
+    top: 400px;
+}
+.movietv{  
+    background-color: white;
+    padding-top: 500px;
+    display: grid;
+    place-items: center;
+    gap: 50px;
+    text-align: center;
+}
+.movietv h3,p,span{
+    color: black;
+}
+
+.movietv p{
+    max-width: 80%;
+    font-weight: 100;
+    opacity: 0.8;
+}
+.read-more{
+    padding: 10px 20px;
+    background: #270082;
+    color: white;
+}
+.read-more:hover{
+    background-color: #52339b;
+}
+.movietv img{
+    margin-bottom: 40px;
+}
+
+.video-section{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-margin: 90px;
+}
+
+.video-section video{
+    position: relative;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    shape-margin: 90px;
+}
+.content{
+    position: absolute;
+    z-index: 1;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+}
+.content h3{
+    font-size: 30px;
+
+}
+.content p{
+    color: white;
+    max-width: 100%;
+    text-align: center;
+    font-weight: 100;
+    opacity: 0.8;
+}
+
+.gift-cards{
+    padding: 150px;
+    background-color: white;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    scroll-margin: 90px;
+}
+
+.gift-info{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.gift-info h3,p{
+    color: black;
+}
+
+.gift-info span{
+    width: 100px;
+    padding: 5px 20px;
+    background: #270082;
+    color: white;
+}
+.gift-info span:hover{
+    background-color: #52339b;
+}
+
+.lists{
+    background-color: #281154;
+    color: white;
+    font-weight: 100;
+    padding: 30px 0px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.lists h4{
+    border-bottom: 2px solid white;
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    line-height: 10px;
+}
+
+.copyright h3{
+    text-align: center;
+    color: white;
+    font-weight: 100;
+    padding: 20px;
+    background-color: #270082;
+}
+
+@media (max-width:900px) {
+    .movietv img{
+        width: 100%;
+    }
+    .screens,.screens img{
+        width: 100%;
+    }
+
+    .gift-cards{
+        width: 100%;
+        flex-direction: column;
+        padding: 10px 10px;
+    }
+    .gift-cards img{
+        width: 100%;
+    }
+    .gift-info{
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .lists{
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+
+    header{
+        padding: 1rem;
+        gap: 20px;
+    }
+    nav{
+        overflow-x: auto;
+        align-items: center;
+    }
+
+    .hero h1{
+        font-size: 3rem;
+    }
+    .hero h3{
+        font-size: 1.5rem;
+    }
+}
